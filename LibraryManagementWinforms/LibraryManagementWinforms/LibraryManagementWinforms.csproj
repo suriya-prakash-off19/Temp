@@ -58,6 +58,12 @@
     <Compile Include="ContainerForm.Designer.cs">
       <DependentUpon>ContainerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="PictLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,17 +75,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RoundedPanelNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoundedPanelNew.Designer.cs">
+      <DependentUpon>RoundedPanelNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transparant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transparant.Designer.cs">
       <DependentUpon>Transparant.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MemberForm.cs">
       <SubType>Form</SubType>
@@ -166,16 +172,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminUserControls\" />
+    <Folder Include="CommonPages\" />
     <Folder Include="StaffUserControls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Backend\Backend.csproj">
       <Project>{458ca3a3-cb7d-4644-9504-7bcc8948adc7}</Project>
       <Name>Backend</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UserControls\UserControls.csproj">
-      <Project>{c9b80ea9-8db8-494d-9242-2d720291dbf2}</Project>
-      <Name>UserControls</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best-employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

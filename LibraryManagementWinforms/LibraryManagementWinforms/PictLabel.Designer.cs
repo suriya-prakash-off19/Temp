@@ -45,6 +45,7 @@
             this.LabelCon.TabIndex = 0;
             this.LabelCon.Text = "label1";
             this.LabelCon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LabelCon.Click += new System.EventHandler(this.LabelCon_Click);
             // 
             // PictCon
             // 
@@ -55,6 +56,7 @@
             this.PictCon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictCon.TabIndex = 1;
             this.PictCon.TabStop = false;
+            this.PictCon.Click += new System.EventHandler(this.LabelCon_Click);
             // 
             // PictLabel
             // 

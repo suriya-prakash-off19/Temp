@@ -14,7 +14,16 @@ namespace Backend
         public static Dictionary<string, List<(Book book,DateTime date)>> BorrowedBooks = new Dictionary<string, List<(Book book, DateTime date)>>();
         public static int StaffId { get; internal set; }
         public static int MemberId { get; internal set; }
-
+        public static void AddData()
+        {
+            BorrowedBooks["-1"] = new List<(Book book, DateTime date)>();
+            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+        }
     }
     public static class MemberOperations
     {
@@ -45,6 +54,21 @@ namespace Backend
             if (DataManager.BorrowedBooks.Remove(id))
                 book.ReturnItem();
             
+        }
+
+        public static List<string[]> GetDataForBorrowedBooks(int id)
+        {
+            List<string[]> data = new List<string[]>();
+            int i = 1;
+            foreach(var x in DataManager.BorrowedBooks[id.ToString()])
+            {
+                Book book = x.book;
+                DateTime dateTime = x.date;
+                string[] arr = new string[] { i.ToString(),book.ISBN, book.Title, dateTime.ToString("dd/MM/yyyy"), Fine.FineForBook(dateTime).ToString() };
+                data.Add(arr);
+                i++;
+            }
+            return data;
         }
 
         public static void ChangeData(string name,string address,string contact,string password,string id,MemberShip memberShip)

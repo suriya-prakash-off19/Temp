@@ -14,6 +14,10 @@ namespace Backend
     }
     public class Staff : Person
     {
+        public Staff():base("","","")
+        {
+        }
+
         public Staff(string name,string address,string contact,string password,string staffId,StaffPosition staffPosition):base(name,address,contact)
         {
             StaffId = staffId;

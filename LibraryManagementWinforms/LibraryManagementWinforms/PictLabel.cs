@@ -76,5 +76,10 @@ namespace LibraryManagementWinforms
         {
             this.OnMouseLeave(e);
         }
+
+        private void LabelCon_Click(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
     }
 }

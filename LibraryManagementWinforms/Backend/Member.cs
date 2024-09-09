@@ -20,6 +20,10 @@ namespace Backend
             MemberShip = memberShip;
             Password = password;
         }
+        public Member():base("","","")
+        {
+
+        }
         public string Password { get; internal set; }
         public MemberShip MemberShip { get; internal set; }
         public string MemberID { get; internal set; }

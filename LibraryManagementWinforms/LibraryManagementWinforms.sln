@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManagementWinforms",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{458CA3A3-CB7D-4644-9504-7BCC8948ADC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControls", "UserControls\UserControls.csproj", "{C9B80EA9-8DB8-494D-9242-2D720291DBF2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{458CA3A3-CB7D-4644-9504-7BCC8948ADC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{458CA3A3-CB7D-4644-9504-7BCC8948ADC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{458CA3A3-CB7D-4644-9504-7BCC8948ADC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9B80EA9-8DB8-494D-9242-2D720291DBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9B80EA9-8DB8-494D-9242-2D720291DBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9B80EA9-8DB8-494D-9242-2D720291DBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9B80EA9-8DB8-494D-9242-2D720291DBF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -41,8 +41,7 @@
             this.pictLabel1 = new LibraryManagementWinforms.PictLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PnlCont = new LibraryManagementWinforms.RoundedPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PnlCont = new LibraryManagementWinforms.RoundedPanelNew();
             this.PnlOpt.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -50,7 +49,6 @@
             this.roundedPanel2.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.PnlCont.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlOpt
@@ -121,6 +119,7 @@
             this.roundedPanel3.Padding = new System.Windows.Forms.Padding(5);
             this.roundedPanel3.Size = new System.Drawing.Size(209, 69);
             this.roundedPanel3.TabIndex = 0;
+            this.roundedPanel3.Click += new System.EventHandler(this.ProfileClick);
             // 
             // pictLabel3
             // 
@@ -135,6 +134,7 @@
             this.pictLabel3.Size = new System.Drawing.Size(199, 59);
             this.pictLabel3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictLabel3.TabIndex = 2;
+            this.pictLabel3.Click += new System.EventHandler(this.ProfileClick);
             this.pictLabel3.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.pictLabel3.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
@@ -217,25 +217,13 @@
             // PnlCont
             // 
             this.PnlCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.PnlCont.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PnlCont.BorderRadius = 30;
-            this.PnlCont.Controls.Add(this.button1);
+            this.PnlCont.BorderRadius = 40;
             this.PnlCont.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlCont.Location = new System.Drawing.Point(215, 0);
-            this.PnlCont.Margin = new System.Windows.Forms.Padding(0);
             this.PnlCont.Name = "PnlCont";
+            this.PnlCont.Padding = new System.Windows.Forms.Padding(10);
             this.PnlCont.Size = new System.Drawing.Size(938, 536);
-            this.PnlCont.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(164, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(317, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.PnlCont.TabIndex = 5;
             // 
             // MemberForm
             // 
@@ -256,7 +244,6 @@
             this.roundedPanel2.ResumeLayout(false);
             this.roundedPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.PnlCont.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -274,7 +261,6 @@
         private RoundedPanel roundedPanel3;
         private RoundedPanel roundedPanel2;
         private RoundedPanel roundedPanel1;
-        private RoundedPanel PnlCont;
-        private System.Windows.Forms.Button button1;
+        private RoundedPanelNew PnlCont;
     }
 }

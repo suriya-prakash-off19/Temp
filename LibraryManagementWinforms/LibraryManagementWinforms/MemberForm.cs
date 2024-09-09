@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Backend;
+using LibraryManagementWinforms.MemberUserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +17,8 @@ namespace LibraryManagementWinforms
     {
 
         Transparant transparant;
-        public MemberForm()
+        private Member Member;
+        public MemberForm(Person person)
         {
             InitializeComponent();
             transparant = new Transparant();
@@ -23,6 +26,7 @@ namespace LibraryManagementWinforms
             PnlOpt.Resize += OptPanelResize;
             DoubleBuffered = true;
             ResizeRedraw = true;
+            Member = person as Member;
         }
 
         protected override CreateParams CreateParams
@@ -97,6 +101,16 @@ namespace LibraryManagementWinforms
             ContainerForm containerForm = new ContainerForm();
             containerForm.ShowDialog();
             transparant.Hide();
+        }
+
+        private void ProfileClick(object sender, EventArgs e)
+        {
+            Profile profile = Profile.GetInstance(Convert.ToInt32(Member.MemberID));
+            PnlCont.Controls.Add(profile);
+            profile.Dock = DockStyle.Fill;
+            profile.BringToFront();
+            profile.Visible = true;
+            profile.Enabled = true;
         }
     }
 }

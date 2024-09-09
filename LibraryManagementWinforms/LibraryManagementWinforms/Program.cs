@@ -16,7 +16,7 @@ namespace LibraryManagementWinforms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MemberForm());
+            Application.Run(new Login());
         }
     }
 }

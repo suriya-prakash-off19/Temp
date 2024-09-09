@@ -12,9 +12,23 @@ namespace LibraryManagementWinforms.MemberUserControls
 {
     public partial class Books : UserControl
     {
-        public Books()
+        private static Books books;
+        private static int index = -1;
+        public Books(int id)
         {
             InitializeComponent();
+            index = id;
+        }
+        public static Books GetInstance(int id)
+        {
+            if (books == null || index != id)
+            {
+                if (books != null)
+                    books.Dispose();
+                books = new Books(id);
+                
+            }
+            return books;
         }
     }
 }

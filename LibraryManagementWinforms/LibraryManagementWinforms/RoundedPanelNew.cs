@@ -2,41 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Data;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace LibraryManagementWinforms
 {
-    class RoundedPanel : Panel
+    public partial class RoundedPanelNew : UserControl
     {
         private int borderRadius = 0;
-
-
-        public RoundedPanel()
+        public RoundedPanelNew()
         {
-            this.SetStyle(
-                System.Windows.Forms.ControlStyles.UserPaint |
-                System.Windows.Forms.ControlStyles.AllPaintingInWmPaint |
-                System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer,
-                true);
-            typeof(RoundedPanel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
-            Size = new Size(100, 32);
-            DoubleBuffered = true;
-            this.ResizeRedraw = true;
-        }
-
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;
-                return cp;
-            }
+            InitializeComponent();
         }
 
         [Category("Round")]
@@ -51,7 +31,7 @@ namespace LibraryManagementWinforms
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            //base.OnPaint(e);
+            base.OnPaint(e);
             Graphics graphics = e.Graphics;
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
             graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;

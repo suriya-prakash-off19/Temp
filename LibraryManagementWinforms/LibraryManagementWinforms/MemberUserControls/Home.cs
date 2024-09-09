@@ -12,9 +12,23 @@ namespace LibraryManagementWinforms.MemberUserControls
 {
     public partial class Home : UserControl
     {
-        public Home()
+        private static Home home;
+        private static int index = -1;
+        public Home(int id)
         {
             InitializeComponent();
+            index = id;
+        }
+
+        public static Home GetInstance(int id)
+        {
+            if (home == null || id != index)
+            {
+                if (home != null)
+                    home.Dispose();
+                home = new Home(id);
+            }
+            return home;
         }
     }
 }
