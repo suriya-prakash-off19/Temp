@@ -35,17 +35,17 @@
             this.pictLabel4 = new LibraryManagementWinforms.PictLabel();
             this.roundedPanel3 = new LibraryManagementWinforms.RoundedPanel();
             this.pictLabel3 = new LibraryManagementWinforms.PictLabel();
-            this.roundedPanel2 = new LibraryManagementWinforms.RoundedPanel();
-            this.pictLabel2 = new LibraryManagementWinforms.PictLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PnlCont = new LibraryManagementWinforms.RoundedPanelNew();
+            this.roundedPanel2 = new LibraryManagementWinforms.RoundedPanel();
+            this.pictLabel2 = new LibraryManagementWinforms.PictLabel();
             this.PnlOpt.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
-            this.roundedPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.roundedPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlOpt
@@ -68,12 +68,13 @@
             this.tableLayoutPanel1.Controls.Add(this.roundedPanel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.roundedPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 96);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 113);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(215, 290);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -134,6 +135,39 @@
             this.pictLabel3.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.pictLabel3.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "House of Words";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::LibraryManagementWinforms.Properties.Resources.profile;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(215, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PnlCont
+            // 
+            this.PnlCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.PnlCont.BorderRadius = 40;
+            this.PnlCont.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlCont.Location = new System.Drawing.Point(215, 0);
+            this.PnlCont.Name = "PnlCont";
+            this.PnlCont.Padding = new System.Windows.Forms.Padding(10);
+            this.PnlCont.Size = new System.Drawing.Size(938, 536);
+            this.PnlCont.TabIndex = 5;
+            // 
             // roundedPanel2
             // 
             this.roundedPanel2.BorderRadius = 20;
@@ -162,39 +196,6 @@
             this.pictLabel2.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.pictLabel2.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "House of Words";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::LibraryManagementWinforms.Properties.Resources.profile;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // PnlCont
-            // 
-            this.PnlCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.PnlCont.BorderRadius = 40;
-            this.PnlCont.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlCont.Location = new System.Drawing.Point(215, 0);
-            this.PnlCont.Name = "PnlCont";
-            this.PnlCont.Padding = new System.Windows.Forms.Padding(10);
-            this.PnlCont.Size = new System.Drawing.Size(938, 536);
-            this.PnlCont.TabIndex = 5;
-            // 
             // MemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,8 +213,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel3.ResumeLayout(false);
-            this.roundedPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.roundedPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -221,14 +222,14 @@
         #endregion
         private System.Windows.Forms.Panel PnlOpt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private PictLabel pictLabel2;
         private PictLabel pictLabel3;
         private PictLabel pictLabel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private RoundedPanel roundedPanel4;
         private RoundedPanel roundedPanel3;
-        private RoundedPanel roundedPanel2;
         private RoundedPanelNew PnlCont;
+        private RoundedPanel roundedPanel2;
+        private PictLabel pictLabel2;
     }
 }

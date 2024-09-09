@@ -2,56 +2,63 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Data;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace LibraryManagementWinforms
 {
-    class RoundedPanel : Panel
+    public partial class SearchBar : UserControl
     {
-        private int borderRadius = 0;
-
-
-        public RoundedPanel()
+        private int borderRadius;
+        public SearchBar()
         {
-            this.SetStyle(
-                System.Windows.Forms.ControlStyles.UserPaint |
-                System.Windows.Forms.ControlStyles.AllPaintingInWmPaint |
-                System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer,
-                true);
-            typeof(RoundedPanel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
-            Size = new Size(100, 32);
-            DoubleBuffered = true;
-            this.ResizeRedraw = true;
+            InitializeComponent();
+            BackColor = Color.White;
         }
-
-        protected override CreateParams CreateParams
+        public override Font Font
         {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ExStyle |= 0x02000000;
-                return cp;
-            }
-        }
-
-        [Category("Round")]
-        public int BorderRadius
-        {
-            get => borderRadius;
+            get => base.Font;
             set
             {
-                borderRadius = value;
+                base.Font = value;
+                Txt.Font = value;
                 Invalidate();
             }
         }
+        public override Color BackColor
+        {
+            get => base.BackColor;
+            set
+            {
+                base.BackColor = value;
+                Txt.BackColor = value;
+                Pict.BackColor = value;
+                Invalidate();
+            }
+        }
+        public override Color ForeColor
+        {
+            get => base.ForeColor;
+            set
+            {
+                base.ForeColor = value;
+                Txt.ForeColor = value;
+            }
+        }
+        [Category("Curve Radius")]
+        public int BorderRadius
+        {
+            get => borderRadius;
+            set => borderRadius = value;
+        }
+        
         protected override void OnPaint(PaintEventArgs e)
         {
-            //base.OnPaint(e);
+            base.OnPaint(e);
             Graphics graphics = e.Graphics;
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
             graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
@@ -71,6 +78,7 @@ namespace LibraryManagementWinforms
                 }
             }
         }
+
         private GraphicsPath graphicsPath(Rectangle rect, int Radius)
         {
             GraphicsPath path = new GraphicsPath();
@@ -81,7 +89,12 @@ namespace LibraryManagementWinforms
             path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90);
             return path;
         }
-
-
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            int width = this.Width;
+            Pict.Width = (int)(width * 0.19);
+            Txt.Width = (int)(width * 0.80);
+        }
     }
 }

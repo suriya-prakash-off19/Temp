@@ -24,7 +24,12 @@ namespace Backend
             BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
             BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
             members.Add("0", new Member("Suriya", "Palladam", "9384793639", "Suriya6231@", "-1", MemberShip.Basic));
-            books.Add("1234567890123", new Book("c#", "John", "1234567890123", true, 10));
+            books.Add("1234567890123", new Book("c#1", "John", "1234567890123", true, 10));
+            books.Add("123456789012", new Book("c#2", "John", "123456789012", true, 10));
+            books.Add("12345678901", new Book("c#3", "John", "12345678901", true, 10));
+            books.Add("1234567890", new Book("c#4", "John", "1234567890", true, 10));
+            books.Add("123456789", new Book("c#5", "John", "123456789", true, 10));
+
         }
     }
     public static class MemberOperations

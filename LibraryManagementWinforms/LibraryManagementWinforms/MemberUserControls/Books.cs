@@ -42,5 +42,26 @@ namespace LibraryManagementWinforms.MemberUserControls
             }
             return books;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var x = dataGridView1.Rows[e.RowIndex].Cells[3].Value;
+                Transparant transparant = new Transparant();
+                transparant.Show();
+                BuyBook buyBook = new BuyBook(x.ToString(), index);
+                TempForm tempForm = new TempForm(buyBook);
+                tempForm.ShowDialog();
+                transparant.Close();
+            }
+            catch
+            {
+
+            }
+            dataGridView1.Rows.Clear();
+            AddBooks();
+
+        }
     }
 }

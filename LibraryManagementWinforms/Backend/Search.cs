@@ -42,10 +42,9 @@ namespace Backend
             return temp.Where(x => x.Author.StartsWith(author)).ToList();
         }
 
-        public static List<Book> BookOnISBN(string isbn)
+        public static Book BookOnISBN(string isbn)
         {
-            var temp = DataManager.books.Values.ToList();
-            return temp.Where(x => x.ISBN.StartsWith(isbn)).ToList();
+            return DataManager.books[isbn];
         }
     }
 }

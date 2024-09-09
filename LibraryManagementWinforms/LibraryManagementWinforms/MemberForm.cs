@@ -27,6 +27,13 @@ namespace LibraryManagementWinforms
             DoubleBuffered = true;
             ResizeRedraw = true;
             Member = person as Member;
+            Books books = Books.GetInstance(Convert.ToInt32(Member.MemberID));
+            PnlCont.Controls.Clear();
+            PnlCont.Controls.Add(books);
+            books.Dock = DockStyle.Fill;
+            books.BringToFront();
+            books.Visible = true;
+            books.Enabled = true;
         }
 
         protected override CreateParams CreateParams

@@ -41,3 +41,6 @@ D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\Librar
 D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.csproj.CopyComplete
 D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.exe
 D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.pdb
+D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.SearchBar.resources
+D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.MemberUserControls.BuyBook.resources
+D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.TempForm.resources
