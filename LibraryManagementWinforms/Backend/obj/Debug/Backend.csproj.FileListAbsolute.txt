@@ -1,0 +1,6 @@
+D:\Suriya Prakash\LibraryManagementWinforms\Backend\obj\Debug\Backend.csproj.CoreCompileInputs.cache
+D:\Suriya Prakash\LibraryManagementWinforms\Backend\bin\Debug\Backend.dll
+D:\Suriya Prakash\LibraryManagementWinforms\Backend\bin\Debug\Backend.pdb
+D:\Suriya Prakash\LibraryManagementWinforms\Backend\obj\Debug\Backend.dll
+D:\Suriya Prakash\LibraryManagementWinforms\Backend\obj\Debug\Backend.pdb
+D:\Suriya Prakash\LibraryManagementWinforms\Backend\obj\Debug\Backend.csprojAssemblyReference.cache
