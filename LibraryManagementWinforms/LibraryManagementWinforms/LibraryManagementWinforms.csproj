@@ -99,12 +99,6 @@
     <Compile Include="MemberUserControls\Books.Designer.cs">
       <DependentUpon>Books.cs</DependentUpon>
     </Compile>
-    <Compile Include="MemberUserControls\Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MemberUserControls\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="MemberUserControls\Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,9 +130,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberUserControls\Books.resx">
       <DependentUpon>Books.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MemberUserControls\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberUserControls\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>

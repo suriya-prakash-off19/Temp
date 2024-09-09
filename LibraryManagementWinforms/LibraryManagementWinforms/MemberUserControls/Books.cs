@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Backend;
 
 namespace LibraryManagementWinforms.MemberUserControls
 {
@@ -18,7 +19,18 @@ namespace LibraryManagementWinforms.MemberUserControls
         {
             InitializeComponent();
             index = id;
+            AddBooks();
         }
+
+        private void AddBooks()
+        {
+            var books = Search.BookOnName("");
+            foreach(var book in BookOperations.GetDataForAllBooks(books))
+            {
+                dataGridView1.Rows.Add(book);
+            }
+        }
+
         public static Books GetInstance(int id)
         {
             if (books == null || index != id)

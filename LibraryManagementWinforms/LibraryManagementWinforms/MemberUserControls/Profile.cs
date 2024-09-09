@@ -17,10 +17,21 @@ namespace LibraryManagementWinforms.MemberUserControls
         private static int index = -1;
         public Profile(int id)
         {
-            DataManager.AddData();
             InitializeComponent();
             index = id;
+            SetData();
             AddContent();
+        }
+
+        private void SetData()
+        {
+            Member member = Search.MemberOnId(index.ToString());
+            LblId.Text = member.MemberID;
+            LblName.Text = member.Name;
+            LblPassword.Text = member.Password;
+            LblType.Text = member.MemberShip.ToString();
+            LblContact.Text = member.Contact;
+            LblAddress.Text = member.Address;
         }
 
         private void AddContent()
@@ -37,7 +48,7 @@ namespace LibraryManagementWinforms.MemberUserControls
             {
                 if (profile != null)
                     profile.Dispose();
-                profile = new Profile(index);
+                profile = new Profile(id);
             }
             return profile;
         }

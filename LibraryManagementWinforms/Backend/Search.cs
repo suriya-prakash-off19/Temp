@@ -14,10 +14,9 @@ namespace Backend
             return temp.Where(x => x.Name.StartsWith(name)).ToList();
         }
 
-        public static List<Member> MemberOnId(string id)
+        public static Member MemberOnId(string id)
         {
-            var temp = DataManager.members.Values.ToList();
-            return temp.Where(x => x.MemberID.StartsWith(id)).ToList();
+            return DataManager.members[id];
         }
 
         public static List<Staff> StaffOnName(string name)
@@ -26,10 +25,9 @@ namespace Backend
             return temp.Where(x => x.Name.StartsWith(name)).ToList();
         }
 
-        public static List<Staff> StaffOnId(string id)
+        public static Staff StaffOnId(string id)
         {
-            var temp = DataManager.staffs.Values.ToList();
-            return temp.Where(x => x.StaffId.StartsWith(id)).ToList();
+            return DataManager.staffs[id];
         }
 
         public static List<Book> BookOnName(string name)
@@ -48,11 +46,6 @@ namespace Backend
         {
             var temp = DataManager.books.Values.ToList();
             return temp.Where(x => x.ISBN.StartsWith(isbn)).ToList();
-        }
-
-        public static List<Book> BookOnBorrowed(string id)
-        {
-            return DataManager.BorrowedBooks[id].Select(x => x.book).ToList();
         }
     }
 }

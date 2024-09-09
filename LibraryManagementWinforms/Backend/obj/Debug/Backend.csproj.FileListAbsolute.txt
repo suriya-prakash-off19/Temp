@@ -4,3 +4,9 @@ D:\Suriya Prakash\LibraryManagementWinforms\Backend\bin\Debug\Backend.pdb
 D:\Suriya Prakash\LibraryManagementWinforms\Backend\obj\Debug\Backend.dll
 D:\Suriya Prakash\LibraryManagementWinforms\Backend\obj\Debug\Backend.pdb
 D:\Suriya Prakash\LibraryManagementWinforms\Backend\obj\Debug\Backend.csprojAssemblyReference.cache
+D:\Git\Temp\LibraryManagementWinforms\Backend\bin\Debug\Backend.dll
+D:\Git\Temp\LibraryManagementWinforms\Backend\bin\Debug\Backend.pdb
+D:\Git\Temp\LibraryManagementWinforms\Backend\obj\Debug\Backend.csprojAssemblyReference.cache
+D:\Git\Temp\LibraryManagementWinforms\Backend\obj\Debug\Backend.csproj.CoreCompileInputs.cache
+D:\Git\Temp\LibraryManagementWinforms\Backend\obj\Debug\Backend.dll
+D:\Git\Temp\LibraryManagementWinforms\Backend\obj\Debug\Backend.pdb

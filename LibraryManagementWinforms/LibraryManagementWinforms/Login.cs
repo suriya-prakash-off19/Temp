@@ -17,6 +17,13 @@ namespace LibraryManagementWinforms
         public Login()
         {
             InitializeComponent();
+            try
+            {
+                DataManager.AddData();
+            }catch
+            {
+
+            }
         }
 
         private void pictLabel1_Load(object sender, EventArgs e)
@@ -66,16 +73,14 @@ namespace LibraryManagementWinforms
                     Person person = new Staff();
                     StaffForm staffForm = new StaffForm();
                     staffForm.ShowDialog();
-                    Close();
                 }
                 else
                 {
                     Person person = new Member();
                     MemberForm memberForm = new MemberForm(person);
                     memberForm.ShowDialog();
-                    Close();
                 }
-      
+            Show();
         }
 
         private void StaffCilck(object sender, EventArgs e)

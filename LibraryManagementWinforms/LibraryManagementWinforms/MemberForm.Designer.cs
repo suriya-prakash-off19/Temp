@@ -37,8 +37,6 @@
             this.pictLabel3 = new LibraryManagementWinforms.PictLabel();
             this.roundedPanel2 = new LibraryManagementWinforms.RoundedPanel();
             this.pictLabel2 = new LibraryManagementWinforms.PictLabel();
-            this.roundedPanel1 = new LibraryManagementWinforms.RoundedPanel();
-            this.pictLabel1 = new LibraryManagementWinforms.PictLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PnlCont = new LibraryManagementWinforms.RoundedPanelNew();
@@ -47,7 +45,6 @@
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
             this.roundedPanel2.SuspendLayout();
-            this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,18 +64,16 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.roundedPanel4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.roundedPanel3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.roundedPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.roundedPanel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.roundedPanel4, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.roundedPanel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.roundedPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 96);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.31839F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.00897F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(215, 290);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -87,10 +82,10 @@
             this.roundedPanel4.BorderRadius = 20;
             this.roundedPanel4.Controls.Add(this.pictLabel4);
             this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel4.Location = new System.Drawing.Point(3, 218);
+            this.roundedPanel4.Location = new System.Drawing.Point(3, 195);
             this.roundedPanel4.Name = "roundedPanel4";
             this.roundedPanel4.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel4.Size = new System.Drawing.Size(209, 69);
+            this.roundedPanel4.Size = new System.Drawing.Size(209, 92);
             this.roundedPanel4.TabIndex = 0;
             // 
             // pictLabel4
@@ -103,9 +98,10 @@
             this.pictLabel4.Name = "pictLabel4";
             this.pictLabel4.Padding = new System.Windows.Forms.Padding(5);
             this.pictLabel4.Picture = null;
-            this.pictLabel4.Size = new System.Drawing.Size(199, 59);
+            this.pictLabel4.Size = new System.Drawing.Size(199, 82);
             this.pictLabel4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictLabel4.TabIndex = 3;
+            this.pictLabel4.Click += new System.EventHandler(this.Logout);
             this.pictLabel4.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.pictLabel4.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
@@ -114,10 +110,10 @@
             this.roundedPanel3.BorderRadius = 20;
             this.roundedPanel3.Controls.Add(this.pictLabel3);
             this.roundedPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel3.Location = new System.Drawing.Point(3, 143);
+            this.roundedPanel3.Location = new System.Drawing.Point(3, 99);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel3.Size = new System.Drawing.Size(209, 69);
+            this.roundedPanel3.Size = new System.Drawing.Size(209, 90);
             this.roundedPanel3.TabIndex = 0;
             this.roundedPanel3.Click += new System.EventHandler(this.ProfileClick);
             // 
@@ -131,7 +127,7 @@
             this.pictLabel3.Name = "pictLabel3";
             this.pictLabel3.Padding = new System.Windows.Forms.Padding(5);
             this.pictLabel3.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel3.Picture")));
-            this.pictLabel3.Size = new System.Drawing.Size(199, 59);
+            this.pictLabel3.Size = new System.Drawing.Size(199, 80);
             this.pictLabel3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictLabel3.TabIndex = 2;
             this.pictLabel3.Click += new System.EventHandler(this.ProfileClick);
@@ -143,10 +139,10 @@
             this.roundedPanel2.BorderRadius = 20;
             this.roundedPanel2.Controls.Add(this.pictLabel2);
             this.roundedPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel2.Location = new System.Drawing.Point(3, 75);
+            this.roundedPanel2.Location = new System.Drawing.Point(3, 3);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel2.Size = new System.Drawing.Size(209, 62);
+            this.roundedPanel2.Size = new System.Drawing.Size(209, 90);
             this.roundedPanel2.TabIndex = 0;
             // 
             // pictLabel2
@@ -159,38 +155,12 @@
             this.pictLabel2.Name = "pictLabel2";
             this.pictLabel2.Padding = new System.Windows.Forms.Padding(5);
             this.pictLabel2.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel2.Picture")));
-            this.pictLabel2.Size = new System.Drawing.Size(199, 52);
+            this.pictLabel2.Size = new System.Drawing.Size(199, 80);
             this.pictLabel2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictLabel2.TabIndex = 1;
+            this.pictLabel2.Click += new System.EventHandler(this.BooksClick);
             this.pictLabel2.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.pictLabel2.MouseLeave += new System.EventHandler(this.MouseLeave);
-            // 
-            // roundedPanel1
-            // 
-            this.roundedPanel1.BorderRadius = 20;
-            this.roundedPanel1.Controls.Add(this.pictLabel1);
-            this.roundedPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel1.Location = new System.Drawing.Point(3, 3);
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel1.Size = new System.Drawing.Size(209, 66);
-            this.roundedPanel1.TabIndex = 0;
-            // 
-            // pictLabel1
-            // 
-            this.pictLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictLabel1.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictLabel1.LblText = "Dashboard";
-            this.pictLabel1.Location = new System.Drawing.Point(5, 5);
-            this.pictLabel1.Name = "pictLabel1";
-            this.pictLabel1.Padding = new System.Windows.Forms.Padding(5);
-            this.pictLabel1.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel1.Picture")));
-            this.pictLabel1.Size = new System.Drawing.Size(199, 56);
-            this.pictLabel1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictLabel1.TabIndex = 0;
-            this.pictLabel1.MouseEnter += new System.EventHandler(this.MouseEnter);
-            this.pictLabel1.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
             // label1
             // 
@@ -235,6 +205,7 @@
             this.Controls.Add(this.PnlOpt);
             this.MinimumSize = new System.Drawing.Size(1169, 575);
             this.Name = "MemberForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemberForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.PnlOpt.ResumeLayout(false);
@@ -242,7 +213,6 @@
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel3.ResumeLayout(false);
             this.roundedPanel2.ResumeLayout(false);
-            this.roundedPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -251,7 +221,6 @@
         #endregion
         private System.Windows.Forms.Panel PnlOpt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private PictLabel pictLabel1;
         private PictLabel pictLabel2;
         private PictLabel pictLabel3;
         private PictLabel pictLabel4;
@@ -260,7 +229,6 @@
         private RoundedPanel roundedPanel4;
         private RoundedPanel roundedPanel3;
         private RoundedPanel roundedPanel2;
-        private RoundedPanel roundedPanel1;
         private RoundedPanelNew PnlCont;
     }
 }

@@ -16,13 +16,15 @@ namespace Backend
         public static int MemberId { get; internal set; }
         public static void AddData()
         {
-            BorrowedBooks["-1"] = new List<(Book book, DateTime date)>();
-            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["-1"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["0"] = new List<(Book book, DateTime date)>();
+            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            members.Add("0", new Member("Suriya", "Palladam", "9384793639", "Suriya6231@", "-1", MemberShip.Basic));
+            books.Add("1234567890123", new Book("c#", "John", "1234567890123", true, 10));
         }
     }
     public static class MemberOperations
@@ -106,6 +108,19 @@ namespace Backend
             book.Author = author;
             book.Availability = avail;
             book.NoOfitems = noOfItems;
+        }
+
+        public static List<string[]> GetDataForAllBooks(List<Book> books)
+        {
+            List<string[]> arr = new List<string[]>();
+            int n = 1;
+            foreach(var x in books)
+            {
+                string[] str = new string[] {n.ToString(), x.Title, x.Author, x.ISBN, x.Availability.ToString(), x.NoOfitems.ToString() };
+                arr.Add(str);
+                n++;
+            }
+            return arr;
         }
     }
 
