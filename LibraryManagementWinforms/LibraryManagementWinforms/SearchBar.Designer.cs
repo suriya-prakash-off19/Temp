@@ -40,9 +40,11 @@
             this.Txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Txt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt.Location = new System.Drawing.Point(95, 10);
+            this.Txt.Multiline = true;
             this.Txt.Name = "Txt";
-            this.Txt.Size = new System.Drawing.Size(366, 13);
+            this.Txt.Size = new System.Drawing.Size(366, 29);
             this.Txt.TabIndex = 1;
             // 
             // contextMenuStrip1
