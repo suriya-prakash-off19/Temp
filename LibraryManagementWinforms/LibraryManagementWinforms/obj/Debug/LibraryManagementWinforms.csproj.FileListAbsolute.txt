@@ -44,3 +44,7 @@ D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\Librar
 D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.SearchBar.resources
 D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.MemberUserControls.BuyBook.resources
 D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.TempForm.resources
+D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.MemberUserControls.EditProfile.resources
+D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.CommonUserControls.Members.resources
+D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.StaffUserControls.Profile.resources
+D:\Git\Temp\LibraryManagementWinforms\LibraryManagementWinforms\obj\Debug\LibraryManagementWinforms.CommonUserControls.AddMember.resources

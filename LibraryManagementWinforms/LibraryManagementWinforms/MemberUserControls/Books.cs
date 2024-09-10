@@ -15,17 +15,25 @@ namespace LibraryManagementWinforms.MemberUserControls
     {
         private static Books books;
         private static int index = -1;
+        private int Position;
+        private string Check;
         public Books(int id)
         {
             InitializeComponent();
             index = id;
-            AddBooks();
+            var books = Search.BookOnName("");
+            var result = BookOperations.GetDataForAllBooks(books);
+            AddBooks(result);
+            searchBar1.TextChanged += TextChangedHandler;
+            Position = 0;
+            Check = "";
         }
 
-        private void AddBooks()
+        private void AddBooks(List<string[]> list)
         {
-            var books = Search.BookOnName("");
-            foreach(var book in BookOperations.GetDataForAllBooks(books))
+
+            dataGridView1.Rows.Clear();
+            foreach (var book in list)
             {
                 dataGridView1.Rows.Add(book);
             }
@@ -55,13 +63,58 @@ namespace LibraryManagementWinforms.MemberUserControls
                 tempForm.ShowDialog();
                 transparant.Close();
             }
-            catch
+            catch(Exception el)
             {
-
+                MessageBox.Show(el.Message);
             }
-            dataGridView1.Rows.Clear();
-            AddBooks();
+            var books = Search.BookOnName("");
+            var result = BookOperations.GetDataForAllBooks(books);
+            AddBooks(result);
+        }
+        private void TextChangedHandler(object sender,EventArgs e)
+        {
+            Check = ((TextBox)sender).Text;
+            List<Book> book;
+            switch(Position)
+            {
+                case 0:
+                    book = Search.BookOnName(Check);
+                    break;
+                case 1:
+                    book = Search.BookOnAuthor(Check);
+                    break;
+                default:
+                    book = Search.BooksOnISBN(Check);
+                    break;
+            }
+            var y = BookOperations.GetDataForAllBooks(book);
+            AddBooks(y);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Position = comboBox1.SelectedIndex;
+            TextBox textBox = new TextBox();
+            textBox.Text = Check;
+            TextChangedHandler(textBox, EventArgs.Empty);
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            GridSize();
+        }
+        private void GridSize()
+        {
+            if (this.FindForm()?.WindowState == FormWindowState.Maximized)
+                dataGridView1.Font = new Font(dataGridView1.Font.FontFamily, 18, dataGridView1.Font.Style);
+            else
+                dataGridView1.Font = new Font(dataGridView1.Font.FontFamily, 14, dataGridView1.Font.Style);
+        }
+
+        private void Books_Load(object sender, EventArgs e)
+        {
 
         }
-    }
+   }
 }

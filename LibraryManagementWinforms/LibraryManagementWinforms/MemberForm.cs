@@ -15,14 +15,11 @@ namespace LibraryManagementWinforms
 {
     public partial class MemberForm : Form
     {
-
-        Transparant transparant;
+        
         private Member Member;
         public MemberForm(Person person)
         {
             InitializeComponent();
-            transparant = new Transparant();
-            transparant.Hide();
             PnlOpt.Resize += OptPanelResize;
             DoubleBuffered = true;
             ResizeRedraw = true;
@@ -92,27 +89,12 @@ namespace LibraryManagementWinforms
             panel.Padding = new Padding(padding,2*padding,padding,2*padding);
 
         }
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            transparant.Show();
-            ContainerForm containerForm = new ContainerForm();
-            containerForm.ShowDialog();
-            transparant.Hide();
-        }
 
         private void ProfileClick(object sender, EventArgs e)
         {
-            Profile profile = Profile.GetInstance(Convert.ToInt32(Member.MemberID));
+            Profile profile = new Profile(Convert.ToInt32(Member.MemberID));
             PnlCont.Controls.Clear();
             PnlCont.Controls.Add(profile);
             profile.Dock = DockStyle.Fill;
@@ -123,7 +105,7 @@ namespace LibraryManagementWinforms
 
         private void BooksClick(object sender, EventArgs e)
         {
-            Books books = Books.GetInstance(Convert.ToInt32(Member.MemberID));
+            Books books =new Books(Convert.ToInt32(Member.MemberID));
             PnlCont.Controls.Clear();
             PnlCont.Controls.Add(books);
             books.Dock = DockStyle.Fill;

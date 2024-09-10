@@ -36,7 +36,7 @@ namespace LibraryManagementWinforms.MemberUserControls
         {
             book.Borrow();
             DataManager.BorrowedBooks[id.ToString()].Add((book, DateTime.Now));
-            FindForm()?.Close();
+            this.FindForm()?.Close();
         }
     }
 }

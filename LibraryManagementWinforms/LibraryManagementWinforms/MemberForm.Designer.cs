@@ -35,17 +35,17 @@
             this.pictLabel4 = new LibraryManagementWinforms.PictLabel();
             this.roundedPanel3 = new LibraryManagementWinforms.RoundedPanel();
             this.pictLabel3 = new LibraryManagementWinforms.PictLabel();
+            this.roundedPanel2 = new LibraryManagementWinforms.RoundedPanel();
+            this.pictLabel2 = new LibraryManagementWinforms.PictLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PnlCont = new LibraryManagementWinforms.RoundedPanelNew();
-            this.roundedPanel2 = new LibraryManagementWinforms.RoundedPanel();
-            this.pictLabel2 = new LibraryManagementWinforms.PictLabel();
             this.PnlOpt.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
             this.roundedPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlOpt
@@ -135,6 +135,34 @@
             this.pictLabel3.MouseEnter += new System.EventHandler(this.MouseEnter);
             this.pictLabel3.MouseLeave += new System.EventHandler(this.MouseLeave);
             // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.BorderRadius = 20;
+            this.roundedPanel2.Controls.Add(this.pictLabel2);
+            this.roundedPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roundedPanel2.Location = new System.Drawing.Point(3, 3);
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.Padding = new System.Windows.Forms.Padding(5);
+            this.roundedPanel2.Size = new System.Drawing.Size(209, 90);
+            this.roundedPanel2.TabIndex = 0;
+            // 
+            // pictLabel2
+            // 
+            this.pictLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictLabel2.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictLabel2.LblText = "Books";
+            this.pictLabel2.Location = new System.Drawing.Point(5, 5);
+            this.pictLabel2.Name = "pictLabel2";
+            this.pictLabel2.Padding = new System.Windows.Forms.Padding(5);
+            this.pictLabel2.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel2.Picture")));
+            this.pictLabel2.Size = new System.Drawing.Size(199, 80);
+            this.pictLabel2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictLabel2.TabIndex = 1;
+            this.pictLabel2.Click += new System.EventHandler(this.BooksClick);
+            this.pictLabel2.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.pictLabel2.MouseLeave += new System.EventHandler(this.MouseLeave);
+            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -168,34 +196,6 @@
             this.PnlCont.Size = new System.Drawing.Size(938, 536);
             this.PnlCont.TabIndex = 5;
             // 
-            // roundedPanel2
-            // 
-            this.roundedPanel2.BorderRadius = 20;
-            this.roundedPanel2.Controls.Add(this.pictLabel2);
-            this.roundedPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel2.Location = new System.Drawing.Point(3, 3);
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel2.Size = new System.Drawing.Size(209, 90);
-            this.roundedPanel2.TabIndex = 0;
-            // 
-            // pictLabel2
-            // 
-            this.pictLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictLabel2.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictLabel2.LblText = "Books";
-            this.pictLabel2.Location = new System.Drawing.Point(5, 5);
-            this.pictLabel2.Name = "pictLabel2";
-            this.pictLabel2.Padding = new System.Windows.Forms.Padding(5);
-            this.pictLabel2.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel2.Picture")));
-            this.pictLabel2.Size = new System.Drawing.Size(199, 80);
-            this.pictLabel2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictLabel2.TabIndex = 1;
-            this.pictLabel2.Click += new System.EventHandler(this.BooksClick);
-            this.pictLabel2.MouseEnter += new System.EventHandler(this.MouseEnter);
-            this.pictLabel2.MouseLeave += new System.EventHandler(this.MouseLeave);
-            // 
             // MemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +204,7 @@
             this.ClientSize = new System.Drawing.Size(1153, 536);
             this.Controls.Add(this.PnlCont);
             this.Controls.Add(this.PnlOpt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(1169, 575);
             this.Name = "MemberForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -213,8 +214,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.roundedPanel4.ResumeLayout(false);
             this.roundedPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.roundedPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

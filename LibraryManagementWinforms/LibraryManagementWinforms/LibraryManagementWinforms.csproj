@@ -56,6 +56,48 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminUserControls\AddStaffs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControls\AddStaffs.Designer.cs">
+      <DependentUpon>AddStaffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControls\EditStaffs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControls\EditStaffs.Designer.cs">
+      <DependentUpon>EditStaffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControls\Staffs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControls\Staffs.Designer.cs">
+      <DependentUpon>Staffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControls\AddBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControls\AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControls\AddMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControls\AddMember.Designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControls\StaffBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControls\StaffBooks.Designer.cs">
+      <DependentUpon>StaffBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUserControls\Members.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonUserControls\Members.Designer.cs">
+      <DependentUpon>Members.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContainerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +115,12 @@
     </Compile>
     <Compile Include="MemberUserControls\BuyBook.Designer.cs">
       <DependentUpon>BuyBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberUserControls\EditProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MemberUserControls\EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="PictLabel.cs">
       <SubType>UserControl</SubType>
@@ -96,6 +144,12 @@
     </Compile>
     <Compile Include="SearchBar.Designer.cs">
       <DependentUpon>SearchBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffUserControls\Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaffUserControls\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="TempForm.cs">
       <SubType>Form</SubType>
@@ -141,6 +195,18 @@
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControls\AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControls\AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControls\Members.resx">
+      <DependentUpon>Members.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonUserControls\StaffBooks.resx">
+      <DependentUpon>StaffBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContainerForm.resx">
       <DependentUpon>ContainerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberUserControls\BuyBook.resx">
       <DependentUpon>BuyBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberUserControls\EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberUserControls\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
@@ -172,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffForm.resx">
       <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffUserControls\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TempForm.resx">
       <DependentUpon>TempForm.cs</DependentUpon>
@@ -193,9 +265,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AdminUserControls\" />
-    <Folder Include="CommonPages\" />
-    <Folder Include="StaffUserControls\" />
+    <None Include="Resources\staff.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Backend\Backend.csproj">

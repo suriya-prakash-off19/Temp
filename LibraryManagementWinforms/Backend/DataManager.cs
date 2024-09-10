@@ -12,23 +12,24 @@ namespace Backend
         public static Dictionary<string, Staff> staffs = new Dictionary<string, Staff>();
         public static Dictionary<string, Book> books = new Dictionary<string, Book>();
         public static Dictionary<string, List<(Book book,DateTime date)>> BorrowedBooks = new Dictionary<string, List<(Book book, DateTime date)>>();
-        public static int StaffId { get; internal set; }
-        public static int MemberId { get; internal set; }
+        public static int StaffId { get; internal set; } = 1;
+        public static int MemberId { get; internal set; } = 1;
         public static void AddData()
         {
             BorrowedBooks["0"] = new List<(Book book, DateTime date)>();
-            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
-            members.Add("0", new Member("Suriya", "Palladam", "9384793639", "Suriya6231@", "-1", MemberShip.Basic));
+            //BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            //BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            //BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            //BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            //BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            //BorrowedBooks["0"].Add((new Book("c#", "John", "1234567890123", true, 10), DateTime.Now));
+            members.Add("0", new Member("Suriya", "Palladam", "9384793639", "Suriya6231@", "0", MemberShip.Basic));
             books.Add("1234567890123", new Book("c#1", "John", "1234567890123", true, 10));
             books.Add("123456789012", new Book("c#2", "John", "123456789012", true, 10));
             books.Add("12345678901", new Book("c#3", "John", "12345678901", true, 10));
             books.Add("1234567890", new Book("c#4", "John", "1234567890", true, 10));
             books.Add("123456789", new Book("c#5", "John", "123456789", true, 10));
+
 
         }
     }
@@ -58,8 +59,9 @@ namespace Backend
         public static void ReturnBook(string isbn,string id)
         {
             var book = DataManager.books[isbn];
-            if (DataManager.BorrowedBooks.Remove(id))
-                book.ReturnItem();
+            var x = DataManager.BorrowedBooks[id].FindIndex(y => (y.book.ISBN == isbn));
+            DataManager.BorrowedBooks[id].RemoveAt(x);
+            book.ReturnItem();
             
         }
 
@@ -86,6 +88,27 @@ namespace Backend
             member.Contact = contact;
             member.MemberShip = memberShip;
             member.Password = password;
+        }
+        public static void ChangeData(string name, string address, string contact, string password, string id)
+        {
+            var member = DataManager.members[id];
+            member.Name = name;
+            member.Address = address;
+            member.Contact = contact;
+            member.Password = password;
+        }
+
+        public static List<string[]> GetAllMembers(List<Member> list)
+        {
+            List<string[]> data = new List<string[]>();
+            int n = 1;
+            foreach(Member m in list)
+            {
+                string[] store = new string[] { n.ToString(), m.Name, m.MemberID, m.Address, m.Contact, m.MemberShip.ToString() };
+                data.Add(store);
+                n++;
+            }
+            return data;
         }
     }
 

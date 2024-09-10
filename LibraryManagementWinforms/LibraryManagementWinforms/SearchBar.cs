@@ -11,13 +11,17 @@ using System.Drawing.Drawing2D;
 
 namespace LibraryManagementWinforms
 {
+    public delegate void TextChangedEventHandler(object sender, EventArgs e);
+
     public partial class SearchBar : UserControl
     {
+        public event TextChangedEventHandler TextChanged;
         private int borderRadius;
         public SearchBar()
         {
             InitializeComponent();
             BackColor = Color.White;
+            Txt.TextChanged += TextBox1_TextChanged;
         }
         public override Font Font
         {
@@ -55,7 +59,11 @@ namespace LibraryManagementWinforms
             get => borderRadius;
             set => borderRadius = value;
         }
-        
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            TextChanged?.Invoke(sender, EventArgs.Empty);
+        }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

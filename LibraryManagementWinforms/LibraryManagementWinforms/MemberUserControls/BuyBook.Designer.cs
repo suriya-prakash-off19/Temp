@@ -49,7 +49,8 @@
             // 
             // roundedPanel1
             // 
-            this.roundedPanel1.BorderRadius = 0;
+            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(197)))), ((int)(((byte)(235)))));
+            this.roundedPanel1.BorderRadius = 40;
             this.roundedPanel1.Controls.Add(this.button1);
             this.roundedPanel1.Controls.Add(this.tableLayoutPanel1);
             this.roundedPanel1.Controls.Add(this.pictureBox2);
@@ -60,13 +61,16 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(137, 468);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 30);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Buy Book";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Rent Book";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel1

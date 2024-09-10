@@ -67,7 +67,6 @@ namespace LibraryManagementWinforms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Hide();
                 if(index==1)
                 {
                     Person person = new Staff();
@@ -76,9 +75,24 @@ namespace LibraryManagementWinforms
                 }
                 else
                 {
-                    Person person = new Member();
-                    MemberForm memberForm = new MemberForm(person);
-                    memberForm.ShowDialog();
+                    try
+                    {
+                    var x = Search.MemberOnId(TBId.Text);
+                    if(x.Password==TBPass.Text)
+                    {
+                        Hide();
+                        MemberForm memberForm = new MemberForm(x);
+                        memberForm.ShowDialog();
+                    }
+                    else
+                    {
+                        LblWarn.Show();
+                    }
+                    }   
+                    catch
+                    {
+                    LblWarn.Show();
+                    }
                 }
             Show();
         }

@@ -37,6 +37,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -59,6 +60,7 @@
             // 
             // Cont
             // 
+            this.Cont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
             this.Cont.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Cont.Location = new System.Drawing.Point(0, 53);
             this.Cont.Name = "Cont";

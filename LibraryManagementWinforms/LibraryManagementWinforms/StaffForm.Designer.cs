@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffForm));
             this.PnlOpt = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.roundedPanel4 = new LibraryManagementWinforms.RoundedPanel();
-            this.pictLabel4 = new LibraryManagementWinforms.PictLabel();
+            this.LblLogOut = new LibraryManagementWinforms.PictLabel();
             this.roundedPanel3 = new LibraryManagementWinforms.RoundedPanel();
+            this.LblProfile = new LibraryManagementWinforms.PictLabel();
             this.roundedPanel2 = new LibraryManagementWinforms.RoundedPanel();
+            this.LblBook = new LibraryManagementWinforms.PictLabel();
             this.roundedPanel1 = new LibraryManagementWinforms.RoundedPanel();
-            this.pictLabel3 = new LibraryManagementWinforms.PictLabel();
-            this.pictLabel2 = new LibraryManagementWinforms.PictLabel();
-            this.pictLabel1 = new LibraryManagementWinforms.PictLabel();
+            this.LblMember = new LibraryManagementWinforms.PictLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Container = new LibraryManagementWinforms.RoundedPanel();
             this.PnlOpt.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.roundedPanel4.SuspendLayout();
@@ -82,6 +82,118 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(215, 290);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // roundedPanel4
+            // 
+            this.roundedPanel4.BorderRadius = 20;
+            this.roundedPanel4.Controls.Add(this.LblLogOut);
+            this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roundedPanel4.Location = new System.Drawing.Point(3, 218);
+            this.roundedPanel4.Name = "roundedPanel4";
+            this.roundedPanel4.Padding = new System.Windows.Forms.Padding(5);
+            this.roundedPanel4.Size = new System.Drawing.Size(209, 69);
+            this.roundedPanel4.TabIndex = 0;
+            // 
+            // LblLogOut
+            // 
+            this.LblLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblLogOut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblLogOut.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLogOut.LblText = "Logout";
+            this.LblLogOut.Location = new System.Drawing.Point(5, 5);
+            this.LblLogOut.Name = "LblLogOut";
+            this.LblLogOut.Padding = new System.Windows.Forms.Padding(5);
+            this.LblLogOut.Picture = null;
+            this.LblLogOut.Size = new System.Drawing.Size(199, 59);
+            this.LblLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LblLogOut.TabIndex = 3;
+            this.LblLogOut.Click += new System.EventHandler(this.LblLogOut_Click);
+            this.LblLogOut.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.LblLogOut.MouseLeave += new System.EventHandler(this.MouseLeave);
+            // 
+            // roundedPanel3
+            // 
+            this.roundedPanel3.BorderRadius = 20;
+            this.roundedPanel3.Controls.Add(this.LblProfile);
+            this.roundedPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roundedPanel3.Location = new System.Drawing.Point(3, 143);
+            this.roundedPanel3.Name = "roundedPanel3";
+            this.roundedPanel3.Padding = new System.Windows.Forms.Padding(5);
+            this.roundedPanel3.Size = new System.Drawing.Size(209, 69);
+            this.roundedPanel3.TabIndex = 0;
+            // 
+            // LblProfile
+            // 
+            this.LblProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblProfile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblProfile.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProfile.LblText = "Profile";
+            this.LblProfile.Location = new System.Drawing.Point(5, 5);
+            this.LblProfile.Name = "LblProfile";
+            this.LblProfile.Padding = new System.Windows.Forms.Padding(5);
+            this.LblProfile.Picture = ((System.Drawing.Image)(resources.GetObject("LblProfile.Picture")));
+            this.LblProfile.Size = new System.Drawing.Size(199, 59);
+            this.LblProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LblProfile.TabIndex = 2;
+            this.LblProfile.Click += new System.EventHandler(this.LblProfile_Click);
+            this.LblProfile.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.LblProfile.MouseLeave += new System.EventHandler(this.MouseLeave);
+            // 
+            // roundedPanel2
+            // 
+            this.roundedPanel2.BorderRadius = 20;
+            this.roundedPanel2.Controls.Add(this.LblBook);
+            this.roundedPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roundedPanel2.Location = new System.Drawing.Point(3, 75);
+            this.roundedPanel2.Name = "roundedPanel2";
+            this.roundedPanel2.Padding = new System.Windows.Forms.Padding(5);
+            this.roundedPanel2.Size = new System.Drawing.Size(209, 62);
+            this.roundedPanel2.TabIndex = 0;
+            // 
+            // LblBook
+            // 
+            this.LblBook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblBook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblBook.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBook.LblText = "Books";
+            this.LblBook.Location = new System.Drawing.Point(5, 5);
+            this.LblBook.Name = "LblBook";
+            this.LblBook.Padding = new System.Windows.Forms.Padding(5);
+            this.LblBook.Picture = ((System.Drawing.Image)(resources.GetObject("LblBook.Picture")));
+            this.LblBook.Size = new System.Drawing.Size(199, 52);
+            this.LblBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LblBook.TabIndex = 1;
+            this.LblBook.Click += new System.EventHandler(this.LblBook_Click);
+            this.LblBook.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.LblBook.MouseLeave += new System.EventHandler(this.MouseLeave);
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BorderRadius = 20;
+            this.roundedPanel1.Controls.Add(this.LblMember);
+            this.roundedPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roundedPanel1.Location = new System.Drawing.Point(3, 3);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Padding = new System.Windows.Forms.Padding(5);
+            this.roundedPanel1.Size = new System.Drawing.Size(209, 66);
+            this.roundedPanel1.TabIndex = 0;
+            // 
+            // LblMember
+            // 
+            this.LblMember.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LblMember.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblMember.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMember.LblText = "Member";
+            this.LblMember.Location = new System.Drawing.Point(5, 5);
+            this.LblMember.Name = "LblMember";
+            this.LblMember.Padding = new System.Windows.Forms.Padding(5);
+            this.LblMember.Picture = global::LibraryManagementWinforms.Properties.Resources.best_employee;
+            this.LblMember.Size = new System.Drawing.Size(199, 56);
+            this.LblMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LblMember.TabIndex = 0;
+            this.LblMember.Click += new System.EventHandler(this.LblMember_Click);
+            this.LblMember.MouseEnter += new System.EventHandler(this.MouseEnter);
+            this.LblMember.MouseLeave += new System.EventHandler(this.MouseLeave);
+            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -92,115 +204,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "House of Words";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(215, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(938, 536);
-            this.panel1.TabIndex = 7;
-            // 
-            // roundedPanel4
-            // 
-            this.roundedPanel4.BorderRadius = 20;
-            this.roundedPanel4.Controls.Add(this.pictLabel4);
-            this.roundedPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel4.Location = new System.Drawing.Point(3, 218);
-            this.roundedPanel4.Name = "roundedPanel4";
-            this.roundedPanel4.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel4.Size = new System.Drawing.Size(209, 69);
-            this.roundedPanel4.TabIndex = 0;
-            // 
-            // pictLabel4
-            // 
-            this.pictLabel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictLabel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictLabel4.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictLabel4.LblText = "Logout";
-            this.pictLabel4.Location = new System.Drawing.Point(5, 5);
-            this.pictLabel4.Name = "pictLabel4";
-            this.pictLabel4.Padding = new System.Windows.Forms.Padding(5);
-            this.pictLabel4.Picture = null;
-            this.pictLabel4.Size = new System.Drawing.Size(199, 59);
-            this.pictLabel4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictLabel4.TabIndex = 3;
-            // 
-            // roundedPanel3
-            // 
-            this.roundedPanel3.BorderRadius = 20;
-            this.roundedPanel3.Controls.Add(this.pictLabel3);
-            this.roundedPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel3.Location = new System.Drawing.Point(3, 143);
-            this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel3.Size = new System.Drawing.Size(209, 69);
-            this.roundedPanel3.TabIndex = 0;
-            // 
-            // roundedPanel2
-            // 
-            this.roundedPanel2.BorderRadius = 20;
-            this.roundedPanel2.Controls.Add(this.pictLabel2);
-            this.roundedPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel2.Location = new System.Drawing.Point(3, 75);
-            this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel2.Size = new System.Drawing.Size(209, 62);
-            this.roundedPanel2.TabIndex = 0;
-            // 
-            // roundedPanel1
-            // 
-            this.roundedPanel1.BorderRadius = 20;
-            this.roundedPanel1.Controls.Add(this.pictLabel1);
-            this.roundedPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roundedPanel1.Location = new System.Drawing.Point(3, 3);
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Padding = new System.Windows.Forms.Padding(5);
-            this.roundedPanel1.Size = new System.Drawing.Size(209, 66);
-            this.roundedPanel1.TabIndex = 0;
-            // 
-            // pictLabel3
-            // 
-            this.pictLabel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictLabel3.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictLabel3.LblText = "Profile";
-            this.pictLabel3.Location = new System.Drawing.Point(5, 5);
-            this.pictLabel3.Name = "pictLabel3";
-            this.pictLabel3.Padding = new System.Windows.Forms.Padding(5);
-            this.pictLabel3.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel3.Picture")));
-            this.pictLabel3.Size = new System.Drawing.Size(199, 59);
-            this.pictLabel3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictLabel3.TabIndex = 2;
-            // 
-            // pictLabel2
-            // 
-            this.pictLabel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictLabel2.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictLabel2.LblText = "Books";
-            this.pictLabel2.Location = new System.Drawing.Point(5, 5);
-            this.pictLabel2.Name = "pictLabel2";
-            this.pictLabel2.Padding = new System.Windows.Forms.Padding(5);
-            this.pictLabel2.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel2.Picture")));
-            this.pictLabel2.Size = new System.Drawing.Size(199, 52);
-            this.pictLabel2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictLabel2.TabIndex = 1;
-            // 
-            // pictLabel1
-            // 
-            this.pictLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictLabel1.LblFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pictLabel1.LblText = "Dashboard";
-            this.pictLabel1.Location = new System.Drawing.Point(5, 5);
-            this.pictLabel1.Name = "pictLabel1";
-            this.pictLabel1.Padding = new System.Windows.Forms.Padding(5);
-            this.pictLabel1.Picture = ((System.Drawing.Image)(resources.GetObject("pictLabel1.Picture")));
-            this.pictLabel1.Size = new System.Drawing.Size(199, 56);
-            this.pictLabel1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictLabel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -213,17 +216,30 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // Container
+            // 
+            this.Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.Container.BorderRadius = 40;
+            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Container.Location = new System.Drawing.Point(215, 0);
+            this.Container.Name = "Container";
+            this.Container.Padding = new System.Windows.Forms.Padding(20);
+            this.Container.Size = new System.Drawing.Size(938, 536);
+            this.Container.TabIndex = 7;
+            // 
             // StaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(197)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1153, 536);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Container);
             this.Controls.Add(this.PnlOpt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(1169, 575);
             this.Name = "StaffForm";
             this.Text = "StaffLogin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.PnlOpt.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.roundedPanel4.ResumeLayout(false);
@@ -239,15 +255,15 @@
         private System.Windows.Forms.Panel PnlOpt;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private RoundedPanel roundedPanel4;
-        private PictLabel pictLabel4;
+        private PictLabel LblLogOut;
         private RoundedPanel roundedPanel3;
-        private PictLabel pictLabel3;
+        private PictLabel LblProfile;
         private RoundedPanel roundedPanel2;
-        private PictLabel pictLabel2;
+        private PictLabel LblBook;
         private RoundedPanel roundedPanel1;
-        private PictLabel pictLabel1;
+        private PictLabel LblMember;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private RoundedPanel Container;
     }
 }
